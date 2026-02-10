@@ -21,9 +21,18 @@ Passos:
 Resultado Esperado:
 
 O sistema deve autenticar o usuário
-O usuário deve ser redirecionado para a página inicial
+O usuário deve ser redirecionado para a homepage
 O nome do usuário deve ser exibido no topo da página
 
+Resultados reais: 
+O Usuário foi direcionado para a homepage
+
+Pós-condições:
+Aplicativo funciona normalmente
+
+Status: 
+Aprovado
+ 
 
 
 ID: CT-LOGIN-002
@@ -49,6 +58,17 @@ Resultado esperado:
 O sistema deve exibir mensagem informando o erro no topo da página
 O usuário deve ser redirecionado para página de login novamente 
 
+Resultados reais:
+Erro foi informado 
+Foi solicitado nova tentativa do usuário
+
+Pós-condições:
+Aplicativo funciona normalmente
+
+Status:
+Aprovado
+
+
 
 
 ID: CT-LOGIN-003
@@ -73,6 +93,16 @@ Passos:
 Resultado esperado: 
 O sistema deve exibir mensagem informando o erro no topo da página
 O usuário deve ser redirecionado para página de login novamente 
+
+Condições reais:
+Erro foi informado 
+Foi solicitado nova tentativa do usuário
+
+Pós-condições:
+Aplicativo funciona normalmente 
+
+Status:
+Aprovado
 
 
 
@@ -101,6 +131,19 @@ Usuário não tem acesso a homepage
 Será solicitado que o usuário faça login novamente
 Navegador Google Chrome aberto
 
+Resultados reais: 
+Erro informado, exigindo que o usuário digite seus dados de login
+Nova tentativa solicitada
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
+
+
+
 
 ID: CT-LOGIN-005
 Titulo: Login com senha em braco 
@@ -124,6 +167,17 @@ Resultados esperados:
 Usuário recebe mensagem de erro no canto superior da tela
 Usuário não tem acesso a homepage
 Será solicitado que o usuário faça login novamente
+
+Resultados reais:
+Erro informado, exigindo que o usuário digite seus dados de login
+Nova tentativa solicitada
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
 
 
  
@@ -151,6 +205,17 @@ Usuário recebe mensagem de erro no canto superior da tela
 Usuário não tem acesso a homepage
 Será solicitado que o usuário faça login novamente
 
+Resultados reais:
+Erro informado, exigindo que o usuário digite seus dados de login
+Nova tentativa solicitada
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
+
 
 
 
@@ -177,6 +242,17 @@ O sistema devara informar por meio de um indicador que só aceita determinado gr
 O login não será feito no sistema
 Usuário será solicitado para digitar o login novamente 
 
+Resultados reais:
+Erro informado, exigindo que o usuário digite seus dados de login
+Nova tentativa solicitada
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
+
 
 
 ID: CT-LOGIN-008
@@ -201,6 +277,17 @@ Resultado esperado:
 O sistema devara informar por meio de um indicador que só aceita determinado grupo de caracteres 
 O login não será feito no sistema
 Usuário será solicitado para digitar o login novamente 
+
+Resultados reais:
+Erro informado, exigindo que o usuário digite seus dados de login
+Nova tentativa solicitada
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
 
 
 
@@ -228,6 +315,17 @@ O sistema devara informar por meio de um indicador que só aceita determinado gr
 O login não será feito no sistema
 Usuário será solicitado para digitar o login novamente 
 
+Resultados reais:
+Erro informado, exigindo que o usuário digite seus dados de login
+Nova tentativa solicitada
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
+
 
 ID:CT-LOGIN-010
 Titulo: Tentativa falha de login 
@@ -251,6 +349,17 @@ O login será negado
 Ira aparecer um indicador na parte superior da tela indicando o motivo da falha 
 Usuário será sugerido que crie sua conta no sistema 
 
+Resultados reais:
+Erro informado, sugerindo que o usuário crie novo login
+Nova tentativa solicitada
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
+
 
 ------CASOS NEGATIVOS------
 
@@ -272,9 +381,20 @@ Resultados esperados:
 O botão de "Login" ao ser pressioando e verificado que ouve um erro de comunicação com o backend, irá dispara um popup na tela indicando instabilidades na plataforma 
 A página de login sera recarregada manualmente, solcitando reinicio no processo de cadastro
 
+Resultados reais:
+Nenhum erro informado pelo sistema
+Fica em carregamento 
+
+Pós-condições:
+site fica congelado, sem conseguir capturar requisição do backend
+site funciona com falhas
+
+Status:
+Reprovado
+
 
 ID: CTN-LOGIN-002
-Titulo: Usuário cadatrado tem email ou senha incorretos
+Titulo: Usuário cadastrado tem email ou senha incorretos
 
 Pré-condições: 
 Acesso a página de login
@@ -291,5 +411,200 @@ Resultado esperados:
 Será indicado ao usuário que os seus dados de acesso não estão corretos por meio de um popup
 logo após vamos sugerir que ele faça alteração da sua senha e nova tentativar de login será iniciada
 
+Resultados reais:
+Erro informado, exigindo que o usuário digite seus dados de login
+Nova tentativa solicitada
+Susgestão para alteração de senha feita
+
+Pós-condições:
+site nega entrada e nova tentativa é iniciada
+site funciona normalmente
+
+Status:
+Aprovado
+
+
+
+
+ID:CTN-LOGIN-004
+Titulo: Falha no envio de requisição do frontend
+Pré-condições:
+Usuário pode ter conta na plataforma ou não 
+Acesso a página de Login
+Acesso ao navegador Google Chrome
+
+Passos:
+1. Acessar página de login da plataforma 
+2. Digitar E-Mail e Senha em seus campos repectivos com "E-Mail" e "Senha"
+3. Clicar no botão de "Login"
+
+Resultados esperados:
+Backend não ira receber requisição
+Não ira retorna com pesquisa se aquele determinado usuário existe no banco de dados da impresa
+
+Resultados reais:
+Site permanece estático
+Sem resposta ou popup indicando erro ao usuário
+
+Pós-condições
+Usuário não saberá o que fazer 
+Status:
+Reprovado
+
+
+
+
+ID:CTN-LOGIN-005
+Titulo: Erro 401 ao acessar página de login
+
+Pré-condições:
+Acessar Navegador Google Chrome
+Acessar página de login
+
+Passos:
+1. Acessar navegador 
+2. Tentar acessar página de login
+
+Resultados esperados:
+A página devera apresentar erro 401
+
+Resultados reais:
+A página apresentou erro 401 
+Usuário fica impossibilitado de acessar plataforma
+
+Pós-condições:
+Site quebra e não conse ser acessado
+
+Status:
+Reprovado
+
+
+ID:CTN-LOGIN-006
+Titulo: Erro de Usuário nâo encontrado
+Pré-condições:
+Acessar página de login na plataforma
+Usuário deve ter conta na plataforma
+Acesso ao  google chrome navegador
+
+Passos:
+1. Acessar página de login na plataforma
+2. Adicionar dados de login nos campos solicitados
+3. Clicar no botão de Login
+
+Resultados esperados:
+Apresentará popup com indicando que o usuário não foi encontrado
+Será sugerido criar novo login
+
+Resultados reais:
+A requisição ao banco de dados não consegue encontrar um usuario com aquele email e senha
+
+Pós-condições:
+Site sugere que o cliente crie uma nova conta
+Site apresenta falhas de requisições
+ 
+Status:
+Reprovado
+
+
+
+ID:CTN-LOGIN-007
+Titulo:Email para recupreção de conta não chega ao usuário
+Pré-condições:
+Acesso a navegador google chrome
+Scesso a pagina de login
+Usuario deverá solicitar recuperação de conta
+
+Passos:
+1. acesso a pagina de login
+2. digitar email no campo email
+3. solicitar envio de email para redefinição de senha
+
+Resultados esperados:
+O email nunca chega ao cliente 
+Não consegue ter acesso a conta com senha antiga
+
+Resultados reais:
+cliente fica sem acesso
+Pós-condições
+site funciona
+serviço de mensagem automatica está quebrado
+Status:
+Reprovado
+
+ID:CTN-LOGIN-008
+Titulo: Falha ao cadastrar novo usuário
+Pré-condições:
+Acesso ao navegador google chrome
+acesso a pagina de login
+usuário não deve ter conta na plataforma
+
+Passos:
+1. acessar plataforma
+2. adicionar nome 
+3. adicionar sobrenomme
+5. clicar em prosseguir
+6. digitar email para ser usado na conta
+7. reescrever email que sera usado
+8. clicar em proseeguir 
+9. adicionar em confirmar senha 
+10. cliclar em cria novo usuário
+
+Resultados esperados:
+usuario recebe notificação indicando que não consegue se cadastrar na plataforma
+
+Resultados reais:
+site não funciona corretamente 
+
+Pós-condições
+erro ao enviar reiquesição ao banco de dados para criar novo cliente
+Status:
+reprovado
+
+
+ID:CTN-LOGIN-009
+Titulo:Servidor onde site está hospedado cai repentinamente
+Pré-condições:
+Acessar navegador google chrome
+acessar página de logina
+
+Passos:
+1. acessar página de login
+2. inserir email e senha 
+3. clilcar em login
+
+Resultados esperados:
+site cai repetinamente 
+apresenta instabilidade no servidor 
+
+Resultados reais:
+site funciona normalmente
+servidor onde está hosoedado apresenta instabilidades
+Pós-condições
+servidor apresenta instabilidade recorrente
+Status:
+reprovado
+
+ID:CTN-LOGIN-010
+Titulo:Página de acesso com alta demanda
+Pré-condições:
+acesso ao google chrome
+acesso a página de login 
+Passos:
+1. acessar página de login da plataforma
+2. inserir dados de cadastros 
+3. clilcar no botão de login
+
+Resultados esperados:
+site apresenta grande lentidão 
+demora para retornar requisições
+
+Resultados reais:
+site apresenta muita instabilidade devido a alta demanda
+
+Pós-condições
+clientes ficam sem experiencia fluida na plataforma
+
+Status:
+reprovado
 
 
