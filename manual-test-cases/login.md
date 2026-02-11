@@ -448,6 +448,7 @@ Sem resposta ou popup indicando erro ao usuário
 
 Pós-condições
 Usuário não saberá o que fazer 
+risco em caso de falha será o desconforto e percaussos na usabilidade do cliente
 Status:
 Reprovado
 
@@ -581,6 +582,8 @@ site funciona normalmente
 servidor onde está hosoedado apresenta instabilidades
 Pós-condições
 servidor apresenta instabilidade recorrente
+Risco se falhar será a grande queda de usuários os deixando insatisfeito 
+pela instabilidade no sistema e abertura de chamados para resolver o problema
 Status:
 reprovado
 
@@ -604,6 +607,7 @@ site apresenta muita instabilidade devido a alta demanda
 Pós-condições
 clientes ficam sem experiencia fluida na plataforma
 
+Riso se falhar será a grande perca de usuários em horário de pico devido a instabilidade do sistema
 Status:
 reprovado
 
