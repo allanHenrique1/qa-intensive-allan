@@ -21,5 +21,4 @@ Média
 *Prioridade*:
 Alta
 Impacto no usuário ou negócio:
-Usuário que irão usar o serviço de recuperção de conta irão econtrar dificultade
-trazendo problemas para a empresa
+Como os usuários poderão recuperar seus acesso a plataforma ?

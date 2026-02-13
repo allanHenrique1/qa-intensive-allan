@@ -18,9 +18,8 @@ Sistema apresenta enrome lentidão em devolver as requisições na api
 apresente grande congestionamento de tráfego em horarios de pico
 
 *Severidade*:
-Alta
+Critica
 *Prioridade*:
 Alta
 Impacto no usuário ou negócio:
-Em dias mais corridos, e de grande acesso o site vai apresentar alta instabilidade 
-assim afetando a experiencia do usuário, que por consequencia vai acabar deixando os stackholders insastifeitos com o andamento da aplicação 
+Em dias de grande demanda, vai acarretar insatisfação dos usuários

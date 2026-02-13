@@ -24,7 +24,7 @@ Mas barra a tentativa
 *Severidade*:
 Baixa
 *Prioridade*:
-Baixa
+Média
 
 Impacto no usuário ou negócio:
-O Usuário deveria receber um indicadivo do sistema porquê sua tentativa de login não foi bem sucedida
+O correto seria o usuário receber uma resposta, para evitar insatisfações
