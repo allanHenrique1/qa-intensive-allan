@@ -26,16 +26,16 @@ body:
 } 
 
 Status code: 
-200 OK -> indica que está tudo certo com a requisição 
+200 OK 
 Estrutura do body: 
 Estrutura consisa e bem aplicada
 Tipo de dado: 
-Apresenta dados do tipo int, como: userId e ID,
-e do tipo String como: tittle e body
+Ambos os tipos tanto String quanto o int são esperado e estão válidos
 Comportamento esperado: 
 È esperado que o meu request a API seja bem sucedido com um status code de 200 e
 me retorne o conteúdo desejado
-
+E se quebrar em produção?: 
+Caso essa request quebre, usuários não poderão acessar os posts desejados
 
 
 Teste 002: GET /posts/1/comments
@@ -84,11 +84,11 @@ Status code:
 Estrutura do body: 
 Estrutra ideal para um body, elencando apenas o que foi pedido na request sem erros ou dados vazios e incoerentes
 Tipo de dado: 
-Aqui vemos dados do tipo Int como : postID, Id 
-e também do tipo String como: name, email, body
+Todos os dados aparentes nessa response são coerentes e esperados
 Comportamento esperado: 
 comportamento está totalmente de acordo com o esperado
-
+E se quebrar em produção?: 
+Caso quebre, usuário não terão acesso aos comentários dos posts
 
 
 Teste 003: DELETE /posts/1/
@@ -99,12 +99,13 @@ body:
 Status code: 
 200 ok
 Estrutura do body: 
-A estrura aparece vazia por conta que foi feita uma deleção do post de ID 1, status code 200 indica o sucesso da operação  
+A estrura aparece vazia por conta que foi feita uma deleção do post de ID 1, status code 200 indica o sucesso da operação.
 Tipo de dado: 
 Sem tipos de dados
 Comportamento esperado: 
 tudo funcionando perfeitamente
-
+E se quebrar em produção?: 
+Caso esse metódo não funcione, como os usuários vão apagar as postagens?
 
 
 Teste 004: POST  posts/1/
@@ -120,7 +121,8 @@ Tipo de dado:
 nenhun
 Comportamento esperado: 
 Comportamento inesperado dectado, era esperado que o usuário fosse capz de conseguir fazer um post e não receber status code 404
-
+E se quebrar em produção?: 
+Como nessa caso a response quebrou, os usuários ficam impossibilitados de postar
 
 
 Teste 005: POST /comments?postId=1
@@ -135,9 +137,10 @@ Status code:
 Estrutura do body: 
 Sem erros, indica que foi criado um novo comentário no post de Id 1
 Tipo de dado: 
-Apenas um dado do tipo INT que é referenta ao id do novo comentário 
+O dado de tipo INT está coerente e é esperado
 Comportamento esperado: 
 Comportamento agindo como o esperado nessa situcação de criação de novo post
- 
+E se quebrar em produção?: 
+Usuários não irão conseguir públicar novos comentários
 
 
