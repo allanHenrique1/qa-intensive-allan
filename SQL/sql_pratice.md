@@ -30,6 +30,12 @@ SELECT * FROM users WHERE name = 'Allan' AND id = 1;
 Investigar registros parecidos 
 SELECT * FROM users WHERE email = '@gmail.com';
 
+Investigar user se o user está com idade negativa; 
+SELECT * FROM users WHERE age <= 0;
+
+Verificar se o relacionamento entre tabelas está coerente:
+O método mais comum é verificar o INFORMATION_SCHEMA.
+
 ## Como SQL ajuda o QA a provar bugs? 
 Um QA trabalha como uma especie de detetive que investiga inconsistencias e falhas que podem gerar defeitos na aplicação, e desse modo gerar um produto defeituoso para o cliente. Como todo bom detetive tem uma lupa, o QA não pode deixar de ter a sua o SQL (Structured Query Language) funciona como uma especie de lupa no banco de dados que investiga e mais imoprtante consegue provar onde está a inconsistencia, para desse modo acionar os devs para efetuar a devida correção.
 

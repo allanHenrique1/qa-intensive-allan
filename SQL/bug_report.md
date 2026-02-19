@@ -20,6 +20,6 @@ SELECT * FROM users ORDER BY data_criacao_boleto;
 Impacto no negócio:
 Insatisfação ṕor parte dos usuários, falha na integriade e legitimidade dos dados
 Severidade:
-Alta
+Alta, uma vez que acaba prejudicando nossos clientes financeiramente
 Prioridade:
-Alta
+Alta (Não permitir deploy antes de uma prévia correção e testes)

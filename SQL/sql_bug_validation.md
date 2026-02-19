@@ -12,7 +12,7 @@ Ativo
 Incosistẽncia encontrada: 
 UI mostra negado, banco mostra permitido
 Impacto: 
-Sistema está bloqueando usuário que deveria ter permissão
+Sistema está bloqueando usuário que deveria ter permissão gerando um Acesso não atuorizado.
 
 Cenário 2 - Boleto pago automaticamente 
 
@@ -38,4 +38,4 @@ Registro ausente
 Incosistẽncia encontrada: 
 UI com inconsistencia em requisição e obter respsta do banco 
 Impacto: 
-falha de integridade
+falha de integridade de dados, impactando o prroduto pela falta de satsfação dos users
