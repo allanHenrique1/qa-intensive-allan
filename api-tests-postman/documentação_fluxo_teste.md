@@ -4,9 +4,9 @@ Api da GoRest foi utilizada para fins de estudo.
 
 🔹 Fluxo 1 — Criação e Consulta
 
-1. Criar usuário (POST)
+1. Fazer requisição post para novo usuário
 
-2. Confirmar retorno 201
+2. Confirmar retorno 201  (Created)
 
 3. Pegar ID retornado
 
